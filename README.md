@@ -2,34 +2,36 @@
 
 > Este es un ejemplo de como implementar la arquitectura N-Layers en Dart haciendo uso de programacion generica, no se hace una conexion real a una BD pero se tiene todos los metodos necesarios.
 
+
+Se propone la siguiente estructura de carpetas
 ```
 │ 
 │   
-├───.vscode
+├───.vscode -> generado automaticamente por Visual Code
 │       launch.json
 │       
-├───BIZ
+├───BIZ -> Aquí van los managers que hacer validaciones y manipulacion de información 
 │   │   ProductoManager.dart
 │   │   UsuarioManager.dart
 │   │   
-│   └───Fabrics
+│   └───Fabrics -> Patron Factory para la creacion de objetos (Opcional) 
 │           FabricManager.dart
 │           FabricRepository.dart
 │
-├───COMMON
-│   ├───Entidades
+├───COMMON -> Objetos comunes como entidades, interfaces, herramientas varias
+│   ├───Entidades -> Entidades de la Base de datos
 │   │       Producto.dart
 │   │       User.dart
 │   │       
-│   └───Interfaces
+│   └───Interfaces -> interfaces de programación que son implementadas en diferentes clases
 │           IConnection.dart
 │           IGenericManager.dart
 │           IGenericRepository.dart
 │           IProductoManager.dart
 │           IUserManager.dart
 │
-├───DAL
-│   ├───SQlite
+├───DAL -> Aqui todo lo relacionado a la base de datos
+│   ├───SQlite -> carpeta por tipo de BD
 │   │       ConnectionSQLite.dart
 │   │       SQLiteRepository.dart
 │   │
@@ -37,7 +39,7 @@
 │           ConnectionSQLServer.dart
 │           SQLServerRepository.dart
 │
-└───lib
+└───lib -> Punto de inicio o UI
         main.dart
 ```
 
