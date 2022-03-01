@@ -6,6 +6,9 @@ import 'GenericManager.dart';
 
 class ProductoManager extends GenericManager<Producto>
     implements IProductoManager {
+
+  static final ProductoManager productoManager = ProductoManager._();
+  ProductoManager._();
   @override
   List<Producto> getProductosByCategoria(int idCategoria) {
     print('ProductoManager.getProductosByCategoria');

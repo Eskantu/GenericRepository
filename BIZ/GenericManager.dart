@@ -1,11 +1,11 @@
 import '../COMMON/Interfaces/IGenericManager.dart';
 import '../COMMON/Interfaces/IGenericRepository.dart';
-import 'FabricRepository.dart';
+import 'Fabrics/FabricRepository.dart';
 
 class GenericManager<T> implements IGenericManager<T> {
   late IGenericRepository<T> repository;
   GenericManager() {
-    repository = FabricRepository<T>("SQLite") as IGenericRepository<T>;
+    repository = RepositoryFactory("SQLite").getRepository();
   }
 
   @override

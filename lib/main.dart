@@ -1,10 +1,11 @@
+import '../BIZ/Fabrics/FabricManager.dart';
 import '../BIZ/ProductoManager.dart';
 import '../BIZ/UsuarioManager.dart';
 import '../COMMON/Entidades/Producto.dart';
 import '../COMMON/Entidades/User.dart';
 
 void main() {
-  UsuarioManager usuario = UsuarioManager();
+  UsuarioManager usuario = FabricManager().getUserManager();
   User user = User(
       uid: 'uid',
       email: 'email',
@@ -16,7 +17,7 @@ void main() {
   print(usuario.obtener());
   print(usuario.BuscarPorEmail('email'));
 
-  ProductoManager producto = ProductoManager();
+  ProductoManager producto = FabricManager().getProductoManager();
   Producto p =
       Producto(idCategoria: 0, nombre: 'nombre', descripcion: 'descripcion');
   print(producto.crear(p));

@@ -5,6 +5,7 @@ class SQLiteRepository<T> implements IGenericRepository<T> {
   SQLiteRepository(this._db);
   final IConnection _db;
 
+
   @override
   bool delete(T entity) {
     _db.query("Eliminando ${T} desde SQLiteRepository");

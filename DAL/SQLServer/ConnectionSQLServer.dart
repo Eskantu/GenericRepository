@@ -1,9 +1,10 @@
 import '../../COMMON/Interfaces/IConnection.dart';
 
 class ConnectionSQLServer implements IConnection {
-  ConnectionSQLServer() {
-    connect();
-  }
+
+static final ConnectionSQLServer connection = ConnectionSQLServer._();
+
+  ConnectionSQLServer._();
   @override
   bool connect() {
     print('Connected to SQL Server');

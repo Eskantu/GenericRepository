@@ -1,9 +1,10 @@
 import '../../COMMON/Interfaces/IConnection.dart';
 
 class ConnectionSQLite implements IConnection {
-  ConnectionSQLite() {
-    connect();
-  }
+static final ConnectionSQLite connection = ConnectionSQLite._();
+
+  ConnectionSQLite._();
+
   @override
   bool connect() {
     print('Conecata a la base de datos SQLite');
