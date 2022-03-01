@@ -49,7 +49,7 @@ Se suguiere que en esta carpeta se guarde todo lo relacionado a la BD
 * Metodos para manipular informacion
 * Plugins para la BD
 
-### SQlite
+### SQLite
 
 * `SQliteRepository<T>`: implementa `IGenericRepository<T>` que es una interfaces implicita en Dart.
 *  `ConnectionSQLite`: Implementa `IConnection` que es una terface implicita en dart y contiene metodos para la conexion a la BD SQlite
